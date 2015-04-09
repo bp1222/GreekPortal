@@ -1,0 +1,287 @@
+<html>
+ <head>
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+  <title>TrimPath spreadsheet_test</title>
+  <script language="javascript" src="../jsunit/app/jsUnitCore.js"></script>
+  <script language="javascript" src="spreadsheet.js"></script>
+  <LINK REL="stylesheet" TYPE="text/css" HREF="spreadsheet.css"/>
+  <LINK REL="stylesheet" TYPE="text/css" HREF="spreadsheet_grey.css"/>
+ </head>
+ <body>
+ <script language="javascript" src="spreadsheet_test.js"></script>
+
+ <div class="spreadsheetEditor">
+  <div class="spreadsheetScroll" style="width:60%; height:150px;">
+   <div class="spreadsheetBars">
+      <table id="t1" class="spreadsheet" width="800" border="1">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>1</td><td formula="=1+2+3"></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>2</td>
+            <td>
+              A list...
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>A sub list...
+                      <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                      </ul>
+                </li>
+              </ul>
+            </td>
+            <td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>3</td><td></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>4</td><td></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td></td><td></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td></td><td></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td></td><td></td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+   </div>
+  </div>
+ </div>
+
+ <div>
+  Data/Formula tests:
+  <input type="button" value="Recalc" onclick="TrimPath.spreadsheet.calc(document.getElementById('t1'));">
+  <input type="button" value="Show Formulas" onclick="TrimPath.spreadsheet.showFormulas(document.getElementById('t1'));">
+ </div>
+ <div>
+  Row Height tests:
+  <input type="button" value="Row Size" onclick="document.getElementById('t1').rows[4].style.height='50px';">
+ </div>
+ <div>
+  Decoration tests: 
+  <input type="button" value="Decorate" onclick="TrimPath.spreadsheet.decorateSpreadsheet(document.getElementById('t1'));">
+  <input type="button" value="Undecorate" onclick="TrimPath.spreadsheet.undecorateSpreadsheet(document.getElementById('t1'));">
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetEditor">
+  <div class="spreadsheetScroll" style="width:40%; height:100px;">
+   <div class="spreadsheetBars">
+      <table class="spreadsheet" width="800" border="1">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+   </div>
+  </div>
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetEditor">
+  <div class="spreadsheetScroll">
+   <div class="spreadsheetBars">
+      <table class="spreadsheet" width="800" border="1">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+   </div>
+  </div>
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetScroll">
+  <div class="spreadsheetBars">
+      <table class="spreadsheet">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>scroll and bars</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+  </div>
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetBars">
+      <table class="spreadsheet">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>bars only</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetEditor">
+      <table class="spreadsheet">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>editor only</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+ </div>
+
+ <hr/>
+
+ <div class="spreadsheetScroll">
+      <table class="spreadsheet">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tr><td>scroll only</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+        <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+            </tr>
+      </table>
+ </div>
+
+ <hr/>
+
+  <table class="spreadsheet">
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <col width="200">
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <tr><td>no decorations</td><td>just spreadsheet class</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+    <tr><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td><td>123</td>
+        </tr>
+  </table>
+
+ <hr/>
+
+  <div id="TrimPath_log"></div>
+
+  <script language="javascript">
+    // DOM/DHTML/UI related tests go here.
+    TrimPath.spreadsheet.initDocument();
+  </script>
+ </body>
+</html>

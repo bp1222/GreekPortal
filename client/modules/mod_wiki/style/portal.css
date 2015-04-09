@@ -1,0 +1,49 @@
+body {
+	margin:0 auto;
+	padding:0;
+	background:#f4f4f4 url(../images/bg.gif) top center repeat-y;
+	color:#404040;
+}
+
+#header {
+	height: 92px;
+}
+
+#container {
+	/* center page, and set size */
+	margin: 0px auto;
+	background: #ffffff;
+	width: 770px;
+}
+
+#footer {
+	text-align: left;
+}
+
+#login {
+	margin: 10px 20px; 
+}
+
+.text {
+	font-family: Trebuchet, "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #8c8c8c;
+	line-height: 14pt;
+}
+
+.aboutText {
+	font-family: Trebuchet, "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10.5px;
+	color: #ffffff;
+	line-height: 10pt;
+}
+
+.theader {
+	font-family: Trebuchet, "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #61619c;
+	font-weight: bold;
+	line-height: 14pt;
+}
+
+

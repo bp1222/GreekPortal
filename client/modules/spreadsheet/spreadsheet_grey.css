@@ -1,0 +1,78 @@
+DIV.spreadsheetEditor {
+    padding: 2px 2px 2px 2px;
+    background-color: #DDDDDD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+DIV.spreadsheetScroll {
+    margin: 2px 0 2px 0;
+    background-color: #FFFFFF;
+}
+
+TABLE.spreadsheetBarCorner, TABLE.spreadsheetBarTop, TABLE.spreadsheetBarLeft {
+    border: 1px solid #808080;
+    background-color: #DDDDDD;
+}
+
+DIV.spreadsheetControls {
+    margin:  2px 0 2px 0;
+    border: 1px solid #808080;
+    padding: 2px 0 2px 0;
+    background-color: #DDDDDD;
+}
+
+.spreadsheetLocation {
+    width: 60px; 
+    padding-left: 1em;
+    text-align: center;
+}
+
+.spreadsheetFormula {
+    margin-left: .2em;
+    border-color: #C0C0C0 #808080 #808080 #C0C0C0;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spreadsheetFormulaLabel {
+    padding-left: 1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+TD.spreadsheetCellActive {
+    background-color: #F0F0F0;
+}
+
+TH.spreadsheetBarItemSelected {
+    background-color: #F0F0F0;
+}
+
+SPAN.spreadsheetStyle {
+    margin-top: 0px;
+    margin-left: 5px;
+    padding-top: 0px;
+}
+
+SPAN.spreadsheetStyle A {
+    width: 10px;
+    margin: 0;
+    border: 1px solid #DDDDDD;
+    padding: 0 2px 0 2px;
+    text-decoration: none;
+    color: black;
+}
+
+SPAN.spreadsheetStyle A:hover {
+    border: 1px solid #808080;
+    background-color: #F0F0F0;
+}
+
+SPAN.spreadsheetStyleFont A {
+    font-family: "Lucinda Console", courier, monospace;
+}
+
+SPAN.spreadsheetStyleAlign A {
+    font-family: Arial, Helvetica, san-serif;
+}

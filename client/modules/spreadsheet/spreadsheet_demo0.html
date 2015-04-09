@@ -1,0 +1,126 @@
+<html>
+ <head>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
+    <title>TrimPath TrimSpreadsheet Demo</title>
+    <script language="javascript" src="spreadsheet.js"></script>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="spreadsheet.css"/>
+    <LINK REL="stylesheet" TYPE="text/css" HREF="spreadsheet_grey.css"/>
+ </head>
+ <body onload="TrimPath.spreadsheet.initDocument()">
+ <h1>TrimSpreadsheet Demo</h1>
+ <p>Demonstration of a Spreadsheet Engine written in accessible, unobtrusive JavaScript style.  
+    The formula calculation engine and user interface run completely in the browser.
+    See more information at <a href="http://trimpath.com/project/wiki/TrimSpreadsheet">http://trimpath.com/project/wiki/TrimSpreadsheet</a>.
+    </p>
+
+ <p>Cells <strong>C7</strong> and <strong>C8</strong> have formulas.  But, all cells are <strong>alive</strong>.
+    </p>
+
+ <p>Open-source components brought to you by <a href="http://trimpath.com">TrimPath</a>...
+    </p>
+
+ <div class="spreadsheetEditor">
+  <div class="spreadsheetScroll" style="width:80%; height:300px;">
+   <div class="spreadsheetBars">
+      <table id="t1" class="spreadsheet" width="1100" border="1">
+        <col width="200">
+        <col width="300">
+        <col width="50">
+        <col width="400">
+        <col width="50">
+        <col width="50">
+        <col width="50">
+        <tr><td style="font-weight:bold;">Component Name</td>
+            <td style="font-weight:bold;">Description</td>
+            <td style="font-weight:bold;">LOC</td>
+            <td style="font-weight:bold;">Link</td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/JavaScriptTemplates">JavaScript Templates</a></td>
+            <td>A template engine (like PHP/ASP/JSP).</td>
+            <td>300</td>
+            <td><a href="http://trimpath.com/project/wiki/JavaScriptTemplates">http://trimpath.com/project/wiki/JavaScriptTemplates</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimQuery">TrimQuery</a></td>
+            <td>A feature-rich, SQL-like query engine.</td>
+            <td>600</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimQuery">http://trimpath.com/project/wiki/TrimQuery</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">TrimSpreadsheet</a> Engine</td>
+            <td>A spreadsheet recalculation engine.</td>
+            <td>300</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">http://trimpath.com/project/wiki/TrimSpreadsheet</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">TrimSpreadsheet</a> UI</td>
+            <td>A spreadsheet user interface.</td>
+            <td>900</td>
+            <td><a href="http://trimpath.com/project/wiki/TrimSpreadsheet">http://trimpath.com/project/wiki/TrimSpreadsheet</a></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td style="text-align:right;">Total lines of JavaScript code:</td>
+            <td formula="=SUM(C2:C5)"></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td style="text-align:right;">Average lines of JavaScript code:</td>
+            <td formula="=AVERAGE(C2:C5)"></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td>
+            <td>LOC (lines of code) is approximate.</td>
+            <td></td>
+            <td></td>
+            <td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+      </table>
+   </div>
+  </div>
+ </div>
+
+    <script language="javascript">
+        function showSpreadsheetSource(t) {
+            var s = TrimPath.spreadsheet.toCompactSource(t);
+            var w = window.open();
+            w.document.write("<html><body><xmp>" + s + "\n</xmp></body></html>");
+            w.document.close();
+            return false;
+        }
+    </script>
+
+ <p><input type="button" value="Show Table Source" onclick="return showSpreadsheetSource(document.getElementById('t1'))">
+    </p>
+ </body>
+</html>

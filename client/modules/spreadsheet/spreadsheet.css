@@ -1,0 +1,53 @@
+DIV.spreadsheetEditor {
+}
+
+DIV.spreadsheetScroll {
+    overflow: auto;
+}
+
+DIV.spreadsheetBars {
+    position: relative;
+}
+
+TABLE.spreadsheet { 
+    border-collapse: collapse;
+    table-layout: fixed; 
+    empty-cells: show;
+}
+
+TABLE.spreadsheetBarCorner {
+    border-collapse: collapse;
+    table-layout: fixed; 
+    empty-cells: show;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    z-index: 130;
+}
+
+TABLE.spreadsheetBarTop {
+    border-collapse: collapse;
+    table-layout: fixed; 
+    empty-cells: show;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    z-index: 120;
+}
+
+TABLE.spreadsheetBarLeft {
+    border-collapse: collapse;
+    table-layout: fixed; 
+    empty-cells: show;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    z-index: 110;
+}
+
+TABLE.spreadsheet TD, TABLE.spreadsheet TH { 
+    overflow: hidden;
+}
